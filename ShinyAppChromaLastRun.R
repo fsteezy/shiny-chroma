@@ -1,6 +1,7 @@
 library(shiny)
 library(chRoma)
 
+
 ui <- fluidPage(
   titlePanel("chRoma Embedding Analysis"),
   sidebarLayout(
@@ -15,9 +16,9 @@ ui <- fluidPage(
 )
 
 server <- function(input, output) {
-  observeEvent(input.analyzeButton, {
-    req(input.embeddingFile)
-    embeddings <- read.csv(input.embeddingFile$datapath)
+  observeEvent(input$analyzeButton, {
+    req(input$embeddingFile)
+    embeddings <- read.csv(input$embeddingFile$datapath)
     # Assuming your data has columns like x, y, label
     output$embeddingPlot <- renderPlot({
       chRoma::chRoma_plot(embeddings, x = "x", y = "y", label = "label")
@@ -26,4 +27,5 @@ server <- function(input, output) {
 }
 
 shinyApp(ui, server)
+
 
