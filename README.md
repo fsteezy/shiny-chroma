@@ -14,6 +14,10 @@ Installation: Make sure you have R and the necessary packages installed. You can
 install.packages("shiny")
 install.packages("chRoma")
 
+# Image tutorial
+1. ![image](https://github.com/fsteezy/shiny-chroma/assets/26821843/b5203e50-26ef-4a9d-bc1d-357dd521428a)
+
+
 Clone or Download: Clone or download this repository to your local machine.
 git clone https://github.com/your-username/your-repository.git
 Run the App: Open the R script (app.R) in your preferred R development environment (e.g., RStudio). Then, run the app by executing the script.
